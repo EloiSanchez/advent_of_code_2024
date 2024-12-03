@@ -2,8 +2,8 @@ import re
 
 
 def read_input(path):
-    f = open(path, "r")
-    return " ".join(f.read().split("\n"))
+    with open(path, "r") as f:
+        return " ".join(f.read().split("\n"))
 
 
 def find_pattern(text):
