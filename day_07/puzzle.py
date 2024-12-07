@@ -14,6 +14,7 @@ for line in lines:
 
 ans = 0
 for test, digs in zip(tests, digits):
+ # remove "|" for puzzle 1
 	operators = ["ms|"] * (len(digs) - 1)
 	for op in itertools.product(*operators):
 		result = digs[0]
