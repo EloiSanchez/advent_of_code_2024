@@ -1,10 +1,8 @@
-from collections import defaultdict
 import sys
-from puzzle_1 import read_input, decompress, get_checksum
+from puzzle_1 import read_input, get_checksum
 
 
 def parse_input(characters):
-    parsed = defaultdict(list)
     blocks = []
     for idx, length in enumerate(characters):
         if idx % 2 == 0:
@@ -16,7 +14,7 @@ def parse_input(characters):
     return blocks
 
 
-def reorder(blocks: list[list], depth=0):
+def reorder(blocks: list[list]):
     idx, r_idx = 0, len(blocks) - 1
     id = 0
     while r_idx > 0:
